@@ -1,10 +1,10 @@
 <form  [formGroup]="reactiveForm"  (ngSubmit) = "submitReactiveForm()" >
 	<label>Username:</label>
 	<input type="text" name="username" formControlName = 'username' >
-	<div *ngIf = "reactiveForm.controls['username'].hasError('required')" >*</div>
+	<span *ngIf = "reactiveForm.controls['username'].hasError('required')" >*</span>
 	<label>Password</label>
 	<input type="password" name="pass" formControlName = 'password' >
-	<div *ngIf = "reactiveForm.controls['password'].hasError('required')" >*</div>
+	<span *ngIf = "reactiveForm.controls['password'].hasError('required')" >*</span>
 	<button  type="submit" [disabled] = '!reactiveForm.valid' >Click to submit</button>
 
 </form>
