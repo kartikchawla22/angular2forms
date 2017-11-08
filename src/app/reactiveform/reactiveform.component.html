@@ -1,0 +1,7 @@
+<form  [formGroup]="reactiveForm"  (ngSubmit) = "submitReactiveForm()" >
+	<label>Username:</label>
+	<input type="text" name="username" formControlName = 'username' >
+	<label>Password</label>
+	<input type="password" name="pass" formControlName = 'password' >
+	<button  type="submit" [disabled] = '!reactiveForm.valid' >Click to submit</button>
+</form>

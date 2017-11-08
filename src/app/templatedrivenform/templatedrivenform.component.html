@@ -1,0 +1,9 @@
+<form #sampleTemplateForm = 'ngForm' (ngSubmit) = "onSubmitTemplateDriveForm()" >
+
+	<label>Username</label>
+	<input type="text" name="username" [(ngModel)] = "templateDrivenForm.username" required = "true">
+	<label>password</label>
+	<input type="password" name="password" [(ngModel)] = "templateDrivenForm.password"  required="true" >
+	<button  [disabled]  = "!sampleTemplateForm.valid">submit</button>
+
+</form>
