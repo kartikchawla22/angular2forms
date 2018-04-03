@@ -5,6 +5,9 @@
 	<label>Password</label>
 	<input type="password" name="pass" formControlName = 'password' >
 	<span *ngIf = "reactiveForm.controls['password'].hasError('required')" >*</span>
+	<select formControlName = "testNames" >
+		<option *ngFor = "let name of Names" [ngValue]="name">{{name}}</option>
+	</select>
 	<button  type="submit" [disabled] = '!reactiveForm.valid' >Click to submit</button>
 
 </form>
